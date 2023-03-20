@@ -1,0 +1,26 @@
+{
+  "name": "weather-app-cli",
+  "version": "1.0.0",
+  "description": "Weather Console App",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/her4z/weather-app-cli.git"
+  },
+  "author": "Sebastian Heras",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/her4z/weather-app-cli/issues"
+  },
+  "homepage": "https://github.com/her4z/weather-app-cli#readme",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "inquirer": "^9.1.4",
+    "node-fetch": "^3.3.1"
+  }
+}
