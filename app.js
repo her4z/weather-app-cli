@@ -1,3 +1,6 @@
+import * as dotenv from "dotenv";
+dotenv.config();
+
 import { input, menu, pause } from "./helpers/inquirer.js";
 import Searchs from "./models/searchs.js";
 

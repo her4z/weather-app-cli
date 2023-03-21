@@ -4,9 +4,11 @@ export default class Searchs {
   constructor() {}
 
   async search(input = "") {
-    console.log(input);
+    const { API_KEY } = process.env;
     try {
-      fetch("https://reqres.in/api/users?page=2").then((res) => {
+      fetch(
+        `https://api.mapbox.com/geocoding/v5/mapbox.places/${input}.json?limit=5&language=en&access_token=${API_KEY}`
+      ).then((res) => {
         res.json().then((data) => {
           console.log(data);
         });
