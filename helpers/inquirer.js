@@ -63,11 +63,11 @@ const input = async (message) => {
   return input;
 };
 
-const deleteTasksMenu = async (tasks) => {
-  let choices = tasks.map((task, i) => {
+const selectLocationMenu = async (locations) => {
+  let choices = locations.map((location, i) => {
     return {
-      value: task.id,
-      name: `${chalk.green(`${i + 1}.`)} ${task.description}`,
+      value: location.id,
+      name: `${chalk.green(`${i + 1}.`)} ${location.name}`,
     };
   });
 
@@ -79,7 +79,7 @@ const deleteTasksMenu = async (tasks) => {
   const { id } = await inquirer.prompt({
     type: "list",
     name: "id",
-    message: "Select the task to be deleted:",
+    message: "Select a location:",
     choices,
   });
 
@@ -117,4 +117,11 @@ const confirmation = async (message) => {
   return confirm;
 };
 
-export { menu, pause, input, deleteTasksMenu, confirmation, completeTasksMenu };
+export {
+  menu,
+  pause,
+  input,
+  selectLocationMenu,
+  confirmation,
+  completeTasksMenu,
+};
